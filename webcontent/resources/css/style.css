@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Noto+Sans&family=Noto+Sans+KR&display=swap");
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Nanum Myeongjo', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Noto Sans KR', sans-serif; */
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav{
+  padding: 0px, 45px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: white;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.container{
+  padding: 0px, 45px;
+}
+
+.logo{
+  color: #0f432c;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 25px;
+
+}
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+}
+.nav-links li{
+  list-style: none;
+}
+.nav-links a{
+  color: #0f432c;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 14px;
+
+}
+.burger{
+  margin-right: auto;
+  display: none;
+  cursor: pointer;
+}
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: #0f432c;
+  margin: 5px;
+}
+
+@media screen and (max-width: 1024px){
+  .nav-links{
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links{
+    position: absolute;
+    left:0px;
+    height: 92vh;
+    top: 8vh;
+    display: flex;
+    background-color: #5d4954;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    transform: translateX(0%);
+  }
+  .nav-links li{
+    opacity: 0;
+  }
+  .burger{
+    display: block;
+  }
+}
+.nav-active{
+  transform: translateX(0%);
+}
